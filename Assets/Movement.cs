@@ -47,6 +47,16 @@ public class Movement : MonoBehaviour {
     {
         Vector3 down = transform.TransformDirection(Vector3.down);
 
+        if (other.tag == "Tiny")
+        {
+            transform.localScale += new Vector3(0.15f, 0.15f, 0.15f);
+            Destroy(other.gameObject);
+            jumpDistance += jumpDistance * 3;
+            Physics.Raycast(transform.position, down, out hit, jumpDistance);
+            print("hit distance " + hit.distance);
+
+        }
+
         if (other.tag == "Small")
         {
             transform.localScale += new Vector3(0.25f, 0.25f, 0.25f);
@@ -57,9 +67,47 @@ public class Movement : MonoBehaviour {
 
         }
 
-        if (other.tag == "Large")
+        if (other.tag == "Normal")
         {
-            transform.localScale += new Vector3(2, 2, 2);
+            transform.localScale += new Vector3(0.35f, 0.35f, 0.35f);
+            Destroy(other.gameObject);
+            jumpDistance += jumpDistance * 3;
+            Physics.Raycast(transform.position, down, out hit, jumpDistance);
+            print("hit distance " + hit.distance);
+
+        }
+
+        if (other.tag == "Big")
+        {
+            transform.localScale += new Vector3(0.5f, 0.5f, 0.5f);
+            Destroy(other.gameObject);
+            jumpDistance += jumpDistance * 3;
+            Physics.Raycast(transform.position, down, out hit, jumpDistance);
+            print("hit distance " + hit.distance);
+
+        }
+        if (other.tag == "House")
+        {
+            transform.localScale += new Vector3(0.75f, 0.75f, 0.75f);
+            Destroy(other.gameObject);
+            jumpDistance += jumpDistance * 3;
+            Physics.Raycast(transform.position, down, out hit, jumpDistance);
+            print("hit distance " + hit.distance);
+
+        }
+
+        if (other.tag == "Giant")
+        {
+            transform.localScale += new Vector3(1, 1, 1);
+            Destroy(other.gameObject);
+            jumpDistance += jumpDistance * 3;
+            Physics.Raycast(transform.position, down, out hit, jumpDistance);
+            print("hit distance " + hit.distance);
+
+        }
+        if (other.tag == "Castle")
+        {
+            transform.localScale += new Vector3(1.5f, 1.5f, 1.5f);
             Destroy(other.gameObject);
             jumpDistance += jumpDistance * 3;
             Physics.Raycast(transform.position, down, out hit, jumpDistance);

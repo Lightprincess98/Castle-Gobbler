@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Large
   - Small
+  - Tiny
+  - Normal
+  - Big
+  - House
+  - Giant
+  - Castle
   layers:
   - Default
   - TransparentFX
