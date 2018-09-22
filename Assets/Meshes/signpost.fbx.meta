@@ -1,34 +1,40 @@
 fileFormatVersion: 2
-guid: 602a6b05129fefb4fb17ed0be3e7ddef
+guid: 8145a04ea4ddd1742b300e7e007a8ae0
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Plane
-    100004: Plane.001
-    100006: Plane.002
-    400000: //RootNode
-    400002: Plane
-    400004: Plane.001
-    400006: Plane.002
-    2100000: Sand
-    2100002: Dirt
-    2100004: Stone
-    2100006: Grass
-    2100008: Snow
-    2100010: Sand.001
-    2100012: Grass.001
-    2100014: Stone.001
-    2300000: Plane
-    2300002: Plane.001
-    2300004: Plane.002
-    3300000: Plane
-    3300002: Plane.001
-    3300004: Plane.002
-    4300000: Plane.002
-    4300002: Plane
-    4300004: Plane.001
-    2186277476908879412: ImportLogs
+    100000: Camera
+    100002: Cube
+    100004: Cylinder
+    100006: Cylinder.001
+    100008: Cylinder.002
+    100010: Lamp
+    100012: //RootNode
+    400000: Camera
+    400002: Cube
+    400004: Cylinder
+    400006: Cylinder.001
+    400008: Cylinder.002
+    400010: Lamp
+    400012: //RootNode
+    2000000: Camera
+    2100000: Material.002
+    2100002: Material.001
+    2100004: Material.003
+    2100006: Material.004
+    2300000: Cube
+    2300002: Cylinder
+    2300004: Cylinder.001
+    2300006: Cylinder.002
+    3300000: Cube
+    3300002: Cylinder
+    3300004: Cylinder.001
+    3300006: Cylinder.002
+    4300000: Cylinder.002
+    4300002: Cylinder.001
+    4300004: Cube
+    4300006: Cylinder
+    10800000: Lamp
   externalObjects: {}
   materials:
     importMaterials: 1
