@@ -468,6 +468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 5
+  speed: 200
 --- !u!54 &413645078
 Rigidbody:
   m_ObjectHideFlags: 0
