@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour {
     public long speed;
     RaycastHit hit;
     float jumpDistance = 1.5f;
+    public Camera cam;
 
     // Use this for initialization
     void Start () {
@@ -25,7 +26,8 @@ public class Movement : MonoBehaviour {
 
         bool canJump = true;
 
-        Debug.DrawRay(transform.position, down * jumpDistance, Color.black);
+        //Debug.DrawRay(transform.position, down * jumpDistance, Color.black);
+
 
         if (Physics.Raycast(transform.position, down, out hit, jumpDistance))
         {
