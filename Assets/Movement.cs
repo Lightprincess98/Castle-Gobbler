@@ -9,23 +9,31 @@ public class Movement : MonoBehaviour {
     public long speed;
     RaycastHit hit;
     float jumpDistance = 1.5f;
+    public bool inputDisabled;
 
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody>();
     }
+
+    public void enableInput()
+    {
+        inputDisabled = true;
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        var y = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
-        var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
+        if (inputDisabled)
+        {
+            var y = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
+            var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
+            transform.Rotate(0, y, 0);
+            transform.Translate(0, 0, z);
+        }
         Vector3 down = transform.TransformDirection(Vector3.down);
-        transform.Rotate(0, y, 0);
-        transform.Translate(0, 0, z);
-
         bool canJump = true;
+        //Debug.DrawRay(transform.position, down * jumpDistance, Color.black);
 
-        Debug.DrawRay(transform.position, down * jumpDistance, Color.black);
 
         if (Physics.Raycast(transform.position, down, out hit, jumpDistance))
         {
