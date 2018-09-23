@@ -104,7 +104,7 @@ public class Movement : MonoBehaviour {
 
         if (other.tag == "Villager")
         {
-            transform.localScale += new Vector3(0.35f, 0.35f, 0.35f);
+            transform.localScale += new Vector3(0.35f, 035f, 0.35f);
             other.gameObject.SetActive(false);
             jumpDistance += jumpDistance * 3;
             Physics.Raycast(transform.position, down, out hit, jumpDistance);
