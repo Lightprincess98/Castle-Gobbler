@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour {
 
     private Rigidbody rb;
     public int jumpForce;
-    public int speed;
+    public long speed;
     RaycastHit hit;
     float jumpDistance = 1.5f;
 
@@ -53,7 +53,6 @@ public class Movement : MonoBehaviour {
             transform.localScale += new Vector3(0.15f, 0.15f, 0.15f);
             Destroy(other.gameObject);
             jumpDistance += jumpDistance * 3;
-            speed += speed * 4;
             Physics.Raycast(transform.position, down, out hit, jumpDistance);
             print("hit distance " + hit.distance);
 
@@ -64,7 +63,6 @@ public class Movement : MonoBehaviour {
             transform.localScale += new Vector3(0.25f, 0.25f, 0.25f);
             Destroy(other.gameObject);
             jumpDistance += jumpDistance * 3;
-            speed += speed * 4;
             Physics.Raycast(transform.position, down, out hit, jumpDistance);
             print("hit distance " + hit.distance);
 
@@ -75,7 +73,6 @@ public class Movement : MonoBehaviour {
             transform.localScale += new Vector3(0.35f, 0.35f, 0.35f);
             Destroy(other.gameObject);
             jumpDistance += jumpDistance * 3;
-            speed += speed * 4;
             Physics.Raycast(transform.position, down, out hit, jumpDistance);
             print("hit distance " + hit.distance);
 
@@ -86,7 +83,6 @@ public class Movement : MonoBehaviour {
             transform.localScale += new Vector3(0.5f, 0.5f, 0.5f);
             Destroy(other.gameObject);
             jumpDistance += jumpDistance * 3;
-            speed += speed * 4;
             Physics.Raycast(transform.position, down, out hit, jumpDistance);
             print("hit distance " + hit.distance);
 
@@ -96,7 +92,6 @@ public class Movement : MonoBehaviour {
             transform.localScale += new Vector3(0.75f, 0.75f, 0.75f);
             Destroy(other.gameObject);
             jumpDistance += jumpDistance * 3;
-            speed += speed * 4;
             Physics.Raycast(transform.position, down, out hit, jumpDistance);
             print("hit distance " + hit.distance);
 
@@ -107,7 +102,6 @@ public class Movement : MonoBehaviour {
             transform.localScale += new Vector3(1, 1, 1);
             Destroy(other.gameObject);
             jumpDistance += jumpDistance * 3;
-            speed += speed * 4;
             Physics.Raycast(transform.position, down, out hit, jumpDistance);
             print("hit distance " + hit.distance);
 
@@ -117,7 +111,6 @@ public class Movement : MonoBehaviour {
             transform.localScale += new Vector3(1.5f, 1.5f, 1.5f);
             Destroy(other.gameObject);
             jumpDistance += jumpDistance * 3;
-            speed += speed * 4;
             Physics.Raycast(transform.position, down, out hit, jumpDistance);
             print("hit distance " + hit.distance);
 

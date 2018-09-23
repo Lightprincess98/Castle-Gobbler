@@ -418,7 +418,7 @@ Transform:
   - {fileID: 2129545509}
   - {fileID: 393887668}
   m_Father: {fileID: 0}
-  m_RootOrder: 120
+  m_RootOrder: 121
   m_LocalEulerAnglesHint: {x: 0, y: 131.72, z: 0}
 --- !u!1001 &48609298
 Prefab:
@@ -2778,6 +2778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 5
+  speed: 0
 --- !u!54 &366665938
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3358,7 +3359,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &426344405
 Prefab:
@@ -5539,7 +5540,7 @@ Transform:
   - {fileID: 2080022243}
   - {fileID: 2105219960}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &793475762
 Prefab:
@@ -8278,7 +8279,7 @@ Transform:
   - {fileID: 2082214189}
   - {fileID: 1121226077}
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: -46.472004, z: 0}
 --- !u!1 &1205562168
 GameObject:
@@ -9843,7 +9844,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1372116237}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 1, z: -0.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 366665942}
@@ -12428,6 +12429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1796675658}
   - component: {fileID: 1796675657}
+  - component: {fileID: 1796675659}
   m_Layer: 0
   m_Name: Water4SimpleReflectionSceneCamera
   m_TagString: Untagged
@@ -12481,13 +12483,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1796675656}
-  m_LocalRotation: {x: 0.30397123, y: 0.067366876, z: 0.021555945, w: -0.95005184}
-  m_LocalPosition: {x: -142.65492, y: 197.47668, z: -423.47275}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -85.6, y: 262.84003, z: -448.16998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 110
+  m_RootOrder: 111
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!45 &1796675659
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1796675656}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 0}
 --- !u!1001 &1797710646
 Prefab:
   m_ObjectHideFlags: 0
@@ -14316,7 +14326,7 @@ Transform:
   - {fileID: 886765523}
   - {fileID: 2099837176}
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2035063475
 Prefab:
