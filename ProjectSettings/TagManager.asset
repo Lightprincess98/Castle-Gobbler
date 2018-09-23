@@ -12,6 +12,7 @@ TagManager:
   - House
   - Giant
   - Castle
+  - Villager
   layers:
   - Default
   - TransparentFX

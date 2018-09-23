@@ -12,10 +12,12 @@ public class Movement : MonoBehaviour {
     public bool inputDisabled;
     public AudioSource femaleScream;
     public AudioSource maleScream;
+    private win winscript;
 
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody>();
+        winscript = GetComponent<win>();
     }
 
     public void enableInput()
@@ -25,12 +27,18 @@ public class Movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if(transform.localScale.x >= 4)
+        {
+            speed = 10;
+        }
+
         if (inputDisabled)
         {
             var y = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
             var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
             transform.Rotate(0, y, 0);
-            transform.Translate(0, 0, z);
+            transform.Translate(0, 0, z * speed);
         }
         Vector3 down = transform.TransformDirection(Vector3.down);
         bool canJump = true;
@@ -39,7 +47,7 @@ public class Movement : MonoBehaviour {
 
         if (Physics.Raycast(transform.position, down, out hit, jumpDistance))
         {
-            print("hit distance " + hit.distance);
+            //print("hit distance " + hit.distance);
             canJump = true;
         }
         else
@@ -70,7 +78,7 @@ public class Movement : MonoBehaviour {
             other.gameObject.SetActive(false);
             jumpDistance += jumpDistance * 3;
             Physics.Raycast(transform.position, down, out hit, jumpDistance);
-            print("hit distance " + hit.distance);
+            //print("hit distance " + hit.distance);
             gameObject.GetComponent<AudioSource>().Play();
         }
 
@@ -80,7 +88,7 @@ public class Movement : MonoBehaviour {
             other.gameObject.SetActive(false);
             jumpDistance += jumpDistance * 3;
             Physics.Raycast(transform.position, down, out hit, jumpDistance);
-            print("hit distance " + hit.distance);
+            //print("hit distance " + hit.distance);
             gameObject.GetComponent<AudioSource>().Play();
         }
 
@@ -90,8 +98,26 @@ public class Movement : MonoBehaviour {
             other.gameObject.SetActive(false);
             jumpDistance += jumpDistance * 3;
             Physics.Raycast(transform.position, down, out hit, jumpDistance);
-            print("hit distance " + hit.distance);
+            //print("hit distance " + hit.distance);
             gameObject.GetComponent<AudioSource>().Play();
+        }
+
+        if (other.tag == "Villager")
+        {
+            transform.localScale += new Vector3(0.35f, 035f, 0.35f);
+            other.gameObject.SetActive(false);
+            jumpDistance += jumpDistance * 3;
+            Physics.Raycast(transform.position, down, out hit, jumpDistance);
+            //print("hit distance " + hit.distance);
+            gameObject.GetComponent<AudioSource>().Play();
+            if (Random.Range(0, 2) == 1)
+            {
+                femaleScream.Play();
+            }
+            else
+            {
+                maleScream.Play();
+            }
         }
 
         if (other.tag == "Big")
@@ -100,7 +126,7 @@ public class Movement : MonoBehaviour {
             other.gameObject.SetActive(false);
             jumpDistance += jumpDistance * 3;
             Physics.Raycast(transform.position, down, out hit, jumpDistance);
-            print("hit distance " + hit.distance);
+            //print("hit distance " + hit.distance);
             gameObject.GetComponent<AudioSource>().Play();
         }
         if (other.tag == "House")
@@ -109,7 +135,7 @@ public class Movement : MonoBehaviour {
             other.gameObject.SetActive(false);
             jumpDistance += jumpDistance * 3;
             Physics.Raycast(transform.position, down, out hit, jumpDistance);
-            print("hit distance " + hit.distance);
+            //print("hit distance " + hit.distance);
             gameObject.GetComponent<AudioSource>().Play();
             if (Random.Range(0, 2) == 1)
             {
@@ -127,7 +153,7 @@ public class Movement : MonoBehaviour {
             other.gameObject.SetActive(false);
             jumpDistance += jumpDistance * 3;
             Physics.Raycast(transform.position, down, out hit, jumpDistance);
-            print("hit distance " + hit.distance);
+            //print("hit distance " + hit.distance);
             gameObject.GetComponent<AudioSource>().Play();
             if (Random.Range(0, 2) == 1)
             {
@@ -141,10 +167,10 @@ public class Movement : MonoBehaviour {
         if (other.tag == "Castle")
         {
             transform.localScale += new Vector3(1.5f, 1.5f, 1.5f);
-            other.gameObject.SetActive(false);
+            Destroy(other.gameObject);
             jumpDistance += jumpDistance * 3;
             Physics.Raycast(transform.position, down, out hit, jumpDistance);
-            print("hit distance " + hit.distance);
+            //print("hit distance " + hit.distance);
             gameObject.GetComponent<AudioSource>().Play();
             if (Random.Range(0, 2) == 1)
             {
